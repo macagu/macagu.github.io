@@ -2,9 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Checker</title>
 </head>
 <body>
-$END$
+
+<label for="codeInput">Enter the Code:</label>
+<input type="text" id="codeInput">
+<button onclick="checkCode()">Check Code</button>
+<p id="result"></p>
+
+<script>
+  function checkCode() {
+    var enteredCode = document.getElementById("codeInput").value;
+
+    if (enteredCode === "639") {
+      document.getElementById("result").innerHTML = "Tu premio se encuentra debajo de la TV del dormitorio maestro.";
+    } else {
+      document.getElementById("result").innerHTML = "Código incorrecto";
+    }
+  }
+</script>
+
 </body>
 </html>
